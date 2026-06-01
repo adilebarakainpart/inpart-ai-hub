@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: transparent;
+    padding: 0;
+  }
+
+  .section-label {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #888;
+    font-weight: 600;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+  }
+
+  .section-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #111;
+    margin-bottom: 20px;
+  }
+
+  .path-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .path-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: #fff;
+    border: 1px solid #e8e8e8;
+    border-radius: 12px;
+    padding: 16px 20px;
+    text-decoration: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+  }
+
+  .path-item:hover {
+    border-color: #0C1A4E;
+    box-shadow: 0 2px 12px rgba(12,26,78,0.08);
+  }
+
+  .path-item.done {
+    border-color: #1D9E75;
+    background: #f6fdf9;
+  }
+
+  .path-num {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #0C1A4E;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .path-num.done {
+    background: #1D9E75;
+  }
+
+  .path-content {
+    flex: 1;
+  }
+
+  .path-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #111;
+    margin-bottom: 3px;
+  }
+
+  .path-item.done .path-title {
+    color: #0F6E56;
+  }
+
+  .path-desc {
+    font-size: 12px;
+    color: #666;
+    line-height: 1.5;
+  }
+
+  .path-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 5px;
+    flex-shrink: 0;
+  }
+
+  .path-meta {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    color: #999;
+  }
+
+  .path-link {
+    font-size: 11px;
+    color: #185FA5;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-weight: 500;
+  }
+
+  svg.icon {
+    width: 14px;
+    height: 14px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    flex-shrink: 0;
+  }
+
+  svg.icon.check { stroke: #fff; }
+  svg.icon.green { stroke: #1D9E75; }
+</style>
+</head>
+<body>
+
+<p class="section-label">Learning Path</p>
+<h2 class="section-title">Follow these 5 steps in order</h2>
+
+<div class="path-list">
+
+  <a class="path-item" href="https://inovasoftware.jira.com/wiki/spaces/IIT/pages/5094309889/Introduction+to+AI" target="_blank">
+    <div class="path-num">1</div>
+    <div class="path-content">
+      <div class="path-title">Understand what AI really is</div>
+      <div class="path-desc">Generative AI, key concepts, difference between tools — no jargon, just the essentials.</div>
+    </div>
+    <div class="path-right">
+      <div class="path-meta">
+        <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        15 min
+      </div>
+      <div class="path-link">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        Introduction to AI
+      </div>
+    </div>
+  </a>
+
+  <a class="path-item" href="https://inovasoftware.jira.com/wiki/spaces/IIT/pages/5093851155/AI+Inpart+for+internal+operations" target="_blank">
+    <div class="path-num">2</div>
+    <div class="path-content">
+      <div class="path-title">Discover how Inpart uses AI</div>
+      <div class="path-desc">Our AI philosophy, the AI Committee, available tools and real use cases by role.</div>
+    </div>
+    <div class="path-right">
+      <div class="path-meta">
+        <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        20 min
+      </div>
+      <div class="path-link">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        AI @ Inpart
+      </div>
+    </div>
+  </a>
+
+  <a class="path-item" href="https://inovasoftware.jira.com/wiki/spaces/IIT/pages/5094277123/Security+in+AI" target="_blank">
+    <div class="path-num">3</div>
+    <div class="path-content">
+      <div class="path-title">Know the rules — mandatory read</div>
+      <div class="path-desc">What data you can and cannot share with AI tools. GDPR, ISO compliance, data classification.</div>
+    </div>
+    <div class="path-right">
+      <div class="path-meta">
+        <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        15 min
+      </div>
+      <div class="path-link">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Security in AI
+      </div>
+    </div>
+  </a>
+
+  <a class="path-item" href="https://inovasoftware.jira.com/wiki/spaces/IIT/pages/5104074767/Claude+-+Onboarding+Guide" target="_blank">
+    <div class="path-num">4</div>
+    <div class="path-content">
+      <div class="path-title">Get started with Claude</div>
+      <div class="path-desc">Watch the training video, then read the onboarding guide. Hands-on walkthrough of Claude day-to-day.</div>
+    </div>
+    <div class="path-right">
+      <div class="path-meta">
+        <svg class="icon" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        30 min
+      </div>
+      <div class="path-link">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        Claude Onboarding Guide
+      </div>
+    </div>
+  </a>
+
+  <a class="path-item" href="https://inovasoftware.jira.com/wiki/spaces/IIT/pages/5094309896/AI+Prompting+Guide+-+The+Basics" target="_blank">
+    <div class="path-num">5</div>
+    <div class="path-content">
+      <div class="path-title">Learn to write great prompts</div>
+      <div class="path-desc">The 4-element framework (Goal, Context, Source, Expectations) + advanced techniques.</div>
+    </div>
+    <div class="path-right">
+      <div class="path-meta">
+        <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        20 min
+      </div>
+      <div class="path-link">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        Prompting Guide
+      </div>
+    </div>
+  </a>
+
+  <a class="path-item done" href="https://claude.ai" target="_blank">
+    <div class="path-num done">
+      <svg class="icon check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+    </div>
+    <div class="path-content">
+      <div class="path-title">You're ready — open Claude and try it</div>
+      <div class="path-desc">Pick one repetitive task from your day and craft your first prompt using the framework.</div>
+    </div>
+    <div class="path-right">
+      <div class="path-link" style="color:#1D9E75">
+        <svg class="icon green" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        claude.ai
+      </div>
+    </div>
+  </a>
+
+</div>
+
+</body>
+</html>
